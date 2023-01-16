@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="World_Cup_Qatar_Quiz" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background_app" translatesAutoresizingMaskIntoConstraints="NO" id="zgk-ns-7im">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RO6-F4-6hu">
+                                <rect key="frame" x="155" y="420" width="80" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="vuJ-Tz-cle"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="systemPinkColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Start" subtitle="" titleAlignment="automatic">
+                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle1"/>
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="baseBackgroundColor" red="1" green="0.87266463039999997" blue="0.1673309207" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="Bgo-SK-9po" kind="presentation" modalPresentationStyle="fullScreen" id="tmP-zw-na7"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="zgk-ns-7im" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="1G4-dJ-zxB"/>
+                            <constraint firstItem="RO6-F4-6hu" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="20" id="3cf-RQ-yPB"/>
+                            <constraint firstItem="zgk-ns-7im" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="OMx-1Q-IPm"/>
+                            <constraint firstItem="RO6-F4-6hu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Wpz-79-FTq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zgk-ns-7im" secondAttribute="trailing" id="nja-3b-6df"/>
+                            <constraint firstAttribute="bottom" secondItem="zgk-ns-7im" secondAttribute="bottom" id="wu1-AG-Jja"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-24.615384615384613" y="53.317535545023695"/>
+        </scene>
+        <!--Questions View Controller-->
+        <scene sceneID="3tt-Jt-qDu">
+            <objects>
+                <viewController id="Bgo-SK-9po" customClass="QuestionsViewController" customModule="World_Cup_Qatar_Quiz" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Zie-Jk-njQ">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Fmc-39-jav">
+                                <rect key="frame" x="16" y="44" width="358" height="766"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="QuestionText" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eqw-pe-7em">
+                                        <rect key="frame" x="0.0" y="0.0" width="358" height="496"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ij6-s6-M3L">
+                                        <rect key="frame" x="0.0" y="506" width="358" height="80"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="Ga5-vu-jSh"/>
+                                        </constraints>
+                                        <color key="tintColor" red="1" green="0.87266463039999997" blue="0.1673309207" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Choice1">
+                                            <fontDescription key="titleFontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="30"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="selectedQuestion:" destination="Bgo-SK-9po" eventType="touchUpInside" id="EGL-Ka-PTH"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vbv-Mb-JBY">
+                                        <rect key="frame" x="0.0" y="596" width="358" height="80"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="8Aj-eX-zEp"/>
+                                        </constraints>
+                                        <color key="tintColor" red="1" green="0.87266463039999997" blue="0.1673309207" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Choice2">
+                                            <fontDescription key="titleFontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="30"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="selectedQuestion:" destination="Bgo-SK-9po" eventType="touchUpInside" id="cUZ-Sb-i03"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="73l-sr-yB5">
+                                        <rect key="frame" x="0.0" y="686" width="358" height="80"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="3c4-v7-Iu4"/>
+                                        </constraints>
+                                        <color key="tintColor" red="1" green="0.87266463039999997" blue="0.1673309207" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Choice3">
+                                            <fontDescription key="titleFontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="30"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="selectedQuestion:" destination="Bgo-SK-9po" eventType="touchUpInside" id="ice-uZ-aGR"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="1tS-SZ-A0i"/>
+                        <color key="backgroundColor" red="0.18132704499999999" green="0.21482220290000001" blue="0.4977650642" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Fmc-39-jav" firstAttribute="trailing" secondItem="Zie-Jk-njQ" secondAttribute="trailingMargin" id="9KS-5q-eeK"/>
+                            <constraint firstItem="Fmc-39-jav" firstAttribute="centerX" secondItem="Zie-Jk-njQ" secondAttribute="centerX" id="R9u-Tt-Zxt"/>
+                            <constraint firstItem="Fmc-39-jav" firstAttribute="top" secondItem="1tS-SZ-A0i" secondAttribute="top" id="Xzm-Dc-iz7"/>
+                            <constraint firstItem="1tS-SZ-A0i" firstAttribute="bottom" secondItem="Fmc-39-jav" secondAttribute="bottom" id="wJy-br-Rvs"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Eqi-dX-XiB"/>
+                    <connections>
+                        <outlet property="quizText" destination="eqw-pe-7em" id="ifp-Sm-NsG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eS2-aG-DIb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="707" y="65"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="background_app" width="1170" height="2532"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
