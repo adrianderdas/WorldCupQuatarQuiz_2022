@@ -16,6 +16,7 @@
 		A27FEBB92972277B002CFA53 /* QuestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27FEBB82972277B002CFA53 /* QuestionsViewController.swift */; };
 		A27FEBBE29747F03002CFA53 /* QuizBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27FEBBD29747F03002CFA53 /* QuizBrain.swift */; };
 		A27FEBC029747F1A002CFA53 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27FEBBF29747F1A002CFA53 /* Question.swift */; };
+		A27FEBC22975F9A4002CFA53 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27FEBC12975F9A4002CFA53 /* ResultViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		A27FEBB82972277B002CFA53 /* QuestionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsViewController.swift; sourceTree = "<group>"; };
 		A27FEBBD29747F03002CFA53 /* QuizBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizBrain.swift; sourceTree = "<group>"; };
 		A27FEBBF29747F1A002CFA53 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		A27FEBC12975F9A4002CFA53 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ResultViewController.swift; path = "World Cup Qatar Quiz/Controller/ResultViewController.swift"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 			children = (
 				A27FEBA82970C59C002CFA53 /* ViewController.swift */,
 				A27FEBB82972277B002CFA53 /* QuestionsViewController.swift */,
+				A27FEBC12975F9A4002CFA53 /* ResultViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -173,6 +176,7 @@
 			files = (
 				A27FEBBE29747F03002CFA53 /* QuizBrain.swift in Sources */,
 				A27FEBA92970C59C002CFA53 /* ViewController.swift in Sources */,
+				A27FEBC22975F9A4002CFA53 /* ResultViewController.swift in Sources */,
 				A27FEBA52970C59C002CFA53 /* AppDelegate.swift in Sources */,
 				A27FEBC029747F1A002CFA53 /* Question.swift in Sources */,
 				A27FEBB92972277B002CFA53 /* QuestionsViewController.swift in Sources */,

@@ -9,34 +9,59 @@ import UIKit
 
 class QuestionsViewController: UIViewController {
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        updateUI()
+    }
+    
     var quizBrain = QuizBrain()
     
-    
-    @IBOutlet weak var quizText: UILabel!
+    @IBOutlet weak var questionText: UILabel!
+    @IBOutlet weak var progressBar: UIProgressView!
+    @IBOutlet weak var choice1: UIButton!
+    @IBOutlet weak var choice2: UIButton!
+    @IBOutlet weak var choice3: UIButton!
+ 
     
     @IBAction func selectedQuestion(_ sender: UIButton) {
         
-        let userAnswer = sender.currentTitle
+        print("\(quizBrain.questionNumber)")
         
-        let userGotItRight = quizBrain.
+        let userAnswer = sender.currentTitle!
         
+        let userGotItRight = quizBrain.checkAnswer(userAnswer: userAnswer)
         
-    }
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        if userGotItRight {
+            sender.backgroundColor = UIColor.green
+        } else {
+            sender.backgroundColor = UIColor.red
+        }
+        
+        if quizBrain.questionNumber == quizBrain.quiz.count-1{
+        
+          self.performSegue(withIdentifier: "goToResult", sender: self)
+          
+            print("otwieraj")
+        }
+        
+        else {
+        
+        }
+        quizBrain.nextQuestion()
+        updateUI()
+        print("\(quizBrain.questionNumber)")
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @objc func updateUI() {
+        questionText.text = quizBrain.getQuestionText()
+        
+        let answerChoices = quizBrain.getAnswers()
+        choice1.setTitle(answerChoices[0], for: .normal)
+        choice2.setTitle(answerChoices[1], for: .normal)
+        choice3.setTitle(answerChoices[2], for: .normal)
+        
+        progressBar.progress = quizBrain.getProgress()
+    
     }
-    */
-
 }

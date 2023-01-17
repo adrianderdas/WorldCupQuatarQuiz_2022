@@ -64,11 +64,14 @@
                                 <rect key="frame" x="16" y="44" width="358" height="766"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="QuestionText" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eqw-pe-7em">
-                                        <rect key="frame" x="0.0" y="0.0" width="358" height="496"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="358" height="482"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Js5-Xs-F4l">
+                                        <rect key="frame" x="0.0" y="492" width="358" height="4"/>
+                                    </progressView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ij6-s6-M3L">
                                         <rect key="frame" x="0.0" y="506" width="358" height="80"/>
                                         <constraints>
@@ -125,12 +128,75 @@
                     </view>
                     <navigationItem key="navigationItem" id="Eqi-dX-XiB"/>
                     <connections>
-                        <outlet property="quizText" destination="eqw-pe-7em" id="ifp-Sm-NsG"/>
+                        <outlet property="choice1" destination="Ij6-s6-M3L" id="UKN-Kq-pp9"/>
+                        <outlet property="choice2" destination="Vbv-Mb-JBY" id="Nlf-ld-nVY"/>
+                        <outlet property="choice3" destination="73l-sr-yB5" id="elw-bV-C9m"/>
+                        <outlet property="progressBar" destination="Js5-Xs-F4l" id="a2u-3e-Leo"/>
+                        <outlet property="questionText" destination="eqw-pe-7em" id="n0X-Sc-atU"/>
+                        <segue destination="WHH-Rf-Cmq" kind="presentation" identifier="goToResult" modalPresentationStyle="fullScreen" id="J9y-eH-l2I"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eS2-aG-DIb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="707" y="65"/>
+        </scene>
+        <!--Result View Controller-->
+        <scene sceneID="hYa-1T-ThQ">
+            <objects>
+                <viewController id="WHH-Rf-Cmq" customClass="ResultViewController" customModule="World_Cup_Qatar_Quiz" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ASp-xJ-uIx">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LqP-hT-XnT">
+                                <rect key="frame" x="20" y="411.66666666666669" width="350" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MVK-h7-2rH">
+                                <rect key="frame" x="117.00000000000001" y="586" width="156.33333333333337" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="SKz-L5-dbb"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="systemPinkColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Jeszcze raz!" subtitle="" titleAlignment="automatic">
+                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle1"/>
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="baseBackgroundColor" red="1" green="0.87266463039999997" blue="0.1673309207" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" id="0ni-PY-vdP"/>
+                                </connections>
+                            </button>
+                            <tabBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tmd-2f-6Lm">
+                                <rect key="frame" x="1" y="720" width="390" height="49"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <items>
+                                    <tabBarItem springLoaded="YES" systemItem="favorites" id="5P1-D0-0VV"/>
+                                    <tabBarItem systemItem="more" id="kpc-SV-bvh"/>
+                                </items>
+                            </tabBar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="boY-Ls-oVb"/>
+                        <color key="backgroundColor" red="0.18132704499999999" green="0.21482220290000001" blue="0.4977650642" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="MVK-h7-2rH" firstAttribute="centerX" secondItem="ASp-xJ-uIx" secondAttribute="centerX" id="9AV-gW-N8o"/>
+                            <constraint firstItem="LqP-hT-XnT" firstAttribute="centerY" secondItem="ASp-xJ-uIx" secondAttribute="centerY" id="VzL-us-weQ"/>
+                            <constraint firstItem="boY-Ls-oVb" firstAttribute="trailing" secondItem="LqP-hT-XnT" secondAttribute="trailing" constant="20" id="h9R-30-7Hi"/>
+                            <constraint firstItem="boY-Ls-oVb" firstAttribute="bottom" secondItem="MVK-h7-2rH" secondAttribute="bottom" constant="180" id="rgd-PU-paM"/>
+                            <constraint firstItem="LqP-hT-XnT" firstAttribute="leading" secondItem="boY-Ls-oVb" secondAttribute="leading" constant="20" id="sva-fJ-e83"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="textScore" destination="LqP-hT-XnT" id="abf-M7-d5t"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UZ8-VY-9kc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1649" y="72"/>
         </scene>
     </scenes>
     <resources>
