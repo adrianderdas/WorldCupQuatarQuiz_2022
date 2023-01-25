@@ -3,7 +3,6 @@
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
-        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -134,122 +133,145 @@
                         <outlet property="choice3" destination="73l-sr-yB5" id="elw-bV-C9m"/>
                         <outlet property="progressBar" destination="Js5-Xs-F4l" id="a2u-3e-Leo"/>
                         <outlet property="questionText" destination="eqw-pe-7em" id="n0X-Sc-atU"/>
-                        <segue destination="WHH-Rf-Cmq" kind="presentation" identifier="goToResult" modalPresentationStyle="fullScreen" id="J9y-eH-l2I"/>
+                        <segue destination="NNf-kX-FlB" kind="presentation" identifier="goToResult" modalPresentationStyle="fullScreen" id="UPD-Di-IXe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eS2-aG-DIb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="707" y="65"/>
         </scene>
-        <!--Result View Controller-->
-        <scene sceneID="hYa-1T-ThQ">
+        <!--Lista pytań-->
+        <scene sceneID="mRK-A9-1qg">
             <objects>
-                <viewController id="WHH-Rf-Cmq" customClass="ResultViewController" customModule="World_Cup_Qatar_Quiz" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="ASp-xJ-uIx">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                <viewController id="bQZ-yU-pvV" customClass="ListOfQuestionsViewController" customModule="World_Cup_Qatar_Quiz" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YSs-Iy-PLc">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="761"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LqP-hT-XnT">
-                                <rect key="frame" x="20" y="411.66666666666669" width="350" height="21"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="kP0-cy-EdI">
+                                <rect key="frame" x="0.0" y="44" width="390" height="717"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="OneQuestionTableViewCell" rowHeight="109" id="L4x-qC-XRV" customClass="OneQuestionTableViewCell" customModule="World_Cup_Qatar_Quiz" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.666666030883789" width="390" height="109"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="L4x-qC-XRV" id="dhZ-a6-Gvo">
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="109"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yLE-Gt-T5A">
+                                                    <rect key="frame" x="0.0" y="0.0" width="390" height="109"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Jq-PN-sMi">
+                                                            <rect key="frame" x="5" y="5" width="380" height="99"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="0Jq-PN-sMi" secondAttribute="trailing" constant="5" id="55b-ud-ri1"/>
+                                                        <constraint firstAttribute="bottom" secondItem="0Jq-PN-sMi" secondAttribute="bottom" constant="5" id="g7a-Oc-sPj"/>
+                                                        <constraint firstItem="0Jq-PN-sMi" firstAttribute="top" secondItem="yLE-Gt-T5A" secondAttribute="top" constant="5" id="lO0-In-MX5"/>
+                                                        <constraint firstItem="0Jq-PN-sMi" firstAttribute="leading" secondItem="yLE-Gt-T5A" secondAttribute="leading" constant="5" id="vr1-3d-5gX"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="yLE-Gt-T5A" firstAttribute="top" secondItem="dhZ-a6-Gvo" secondAttribute="top" id="ZZK-du-vO5"/>
+                                                <constraint firstItem="yLE-Gt-T5A" firstAttribute="leading" secondItem="dhZ-a6-Gvo" secondAttribute="leading" id="hcl-IP-ygg"/>
+                                                <constraint firstAttribute="trailing" secondItem="yLE-Gt-T5A" secondAttribute="trailing" id="p4N-nn-RGn"/>
+                                                <constraint firstAttribute="bottom" secondItem="yLE-Gt-T5A" secondAttribute="bottom" id="xG8-aw-P5a"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="oneQuestionText" destination="0Jq-PN-sMi" id="SU4-9s-rH5"/>
+                                            <outlet property="questionText" destination="dhZ-a6-Gvo" id="Mfs-xp-nfA"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ZFx-ch-zMH"/>
+                        <color key="backgroundColor" red="0.18132704499999999" green="0.21482220290000001" blue="0.4977650642" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ZFx-ch-zMH" firstAttribute="trailing" secondItem="kP0-cy-EdI" secondAttribute="trailing" id="Mgk-ga-WhU"/>
+                            <constraint firstItem="kP0-cy-EdI" firstAttribute="leading" secondItem="ZFx-ch-zMH" secondAttribute="leading" id="dFZ-TB-X3V"/>
+                            <constraint firstItem="ZFx-ch-zMH" firstAttribute="bottom" secondItem="kP0-cy-EdI" secondAttribute="bottom" id="mcd-bF-Yfj"/>
+                            <constraint firstItem="kP0-cy-EdI" firstAttribute="top" secondItem="ZFx-ch-zMH" secondAttribute="top" id="zNI-JF-qal"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Lista pytań" image="list.bullet" catalog="system" id="vMa-Qy-2Nq"/>
+                    <connections>
+                        <outlet property="questionView" destination="kP0-cy-EdI" id="z3y-RV-U6l"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cVz-WQ-LmU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3473.8461538461538" y="498.34123222748815"/>
+        </scene>
+        <!--Twój wynik-->
+        <scene sceneID="8Hc-od-bqP">
+            <objects>
+                <viewController id="BWi-mL-fvd" customClass="ResultViewController" customModule="World_Cup_Qatar_Quiz" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="m63-0p-xPG">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="761"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tqh-4H-C3y">
+                                <rect key="frame" x="20" y="341" width="350" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MVK-h7-2rH">
-                                <rect key="frame" x="117.00000000000001" y="586" width="156.33333333333337" height="44"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ckt-KK-lbY">
+                                <rect key="frame" x="95" y="617" width="200" height="44"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="SKz-L5-dbb"/>
+                                    <constraint firstAttribute="width" constant="200" id="WMc-Kl-hdv"/>
                                 </constraints>
                                 <color key="tintColor" systemColor="systemPinkColor"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Jeszcze raz!" subtitle="" titleAlignment="automatic">
+                                <buttonConfiguration key="configuration" style="filled" title="Zacznij od nowa" subtitle="" titleAlignment="automatic">
                                     <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle1"/>
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="baseBackgroundColor" red="1" green="0.87266463039999997" blue="0.1673309207" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" id="0ni-PY-vdP"/>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" id="dkk-uM-iyy"/>
                                 </connections>
                             </button>
-                            <tabBar contentMode="scaleToFill" translucent="NO" itemPositioning="fill" translatesAutoresizingMaskIntoConstraints="NO" id="4Rs-pj-1AI">
-                                <rect key="frame" x="0.0" y="761" width="390" height="83"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="83" id="O8q-EH-Mgq"/>
-                                </constraints>
-                                <items>
-                                    <tabBarItem title="Twój wynik" image="square" catalog="system" badgeValue="1" id="G1N-aU-4Px">
-                                        <color key="badgeColor" red="0.18132704499999999" green="0.21482220290000001" blue="0.4977650642" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <imageReference key="selectedImage" image="square" catalog="system" symbolScale="default"/>
-                                    </tabBarItem>
-                                    <tabBarItem title="Przeglądaj pytania" image="list.bullet" catalog="system" selectedImage="list.bullet" id="x5g-G2-OoJ"/>
-                                </items>
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="barTintColor" red="1" green="0.87266463039999997" blue="0.1673309207" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </tabBar>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="boY-Ls-oVb"/>
+                        <viewLayoutGuide key="safeArea" id="jlM-l2-pjn"/>
                         <color key="backgroundColor" red="0.18132704499999999" green="0.21482220290000001" blue="0.4977650642" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <gestureRecognizers/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="4Rs-pj-1AI" secondAttribute="bottom" id="4YW-Pa-D2q"/>
-                            <constraint firstItem="MVK-h7-2rH" firstAttribute="centerX" secondItem="ASp-xJ-uIx" secondAttribute="centerX" id="9AV-gW-N8o"/>
-                            <constraint firstItem="4Rs-pj-1AI" firstAttribute="leading" secondItem="boY-Ls-oVb" secondAttribute="leading" id="D3b-6w-3ga"/>
-                            <constraint firstItem="LqP-hT-XnT" firstAttribute="centerY" secondItem="ASp-xJ-uIx" secondAttribute="centerY" id="VzL-us-weQ"/>
-                            <constraint firstItem="4Rs-pj-1AI" firstAttribute="trailing" secondItem="boY-Ls-oVb" secondAttribute="trailing" id="aXE-hD-dmW"/>
-                            <constraint firstItem="boY-Ls-oVb" firstAttribute="trailing" secondItem="LqP-hT-XnT" secondAttribute="trailing" constant="20" id="h9R-30-7Hi"/>
-                            <constraint firstItem="boY-Ls-oVb" firstAttribute="bottom" secondItem="MVK-h7-2rH" secondAttribute="bottom" constant="180" id="rgd-PU-paM"/>
-                            <constraint firstItem="LqP-hT-XnT" firstAttribute="leading" secondItem="boY-Ls-oVb" secondAttribute="leading" constant="20" id="sva-fJ-e83"/>
+                            <constraint firstItem="tqh-4H-C3y" firstAttribute="centerX" secondItem="m63-0p-xPG" secondAttribute="centerX" id="FiX-eY-6sM"/>
+                            <constraint firstItem="tqh-4H-C3y" firstAttribute="top" secondItem="jlM-l2-pjn" secondAttribute="top" constant="297" id="NSu-9O-KUJ"/>
+                            <constraint firstItem="jlM-l2-pjn" firstAttribute="bottom" secondItem="Ckt-KK-lbY" secondAttribute="bottom" constant="100" id="PZq-tO-uPY"/>
+                            <constraint firstItem="Ckt-KK-lbY" firstAttribute="centerX" secondItem="m63-0p-xPG" secondAttribute="centerX" id="is4-t1-BgH"/>
+                            <constraint firstItem="jlM-l2-pjn" firstAttribute="trailing" secondItem="tqh-4H-C3y" secondAttribute="trailing" constant="20" id="kbW-CK-kQu"/>
+                            <constraint firstItem="tqh-4H-C3y" firstAttribute="leading" secondItem="jlM-l2-pjn" secondAttribute="leading" constant="20" id="rMX-2x-hMB"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Twój wynik" image="square" catalog="system" id="lpq-HA-Vhu"/>
                     <connections>
-                        <outlet property="textScore" destination="LqP-hT-XnT" id="abf-M7-d5t"/>
+                        <outlet property="textScore" destination="tqh-4H-C3y" id="42x-er-rgh"/>
                     </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="UZ8-VY-9kc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1649" y="72"/>
-        </scene>
-        <!--Item 2-->
-        <scene sceneID="mRK-A9-1qg">
-            <objects>
-                <viewController id="bQZ-yU-pvV" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="YSs-Iy-PLc">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="ZFx-ch-zMH"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="vMa-Qy-2Nq"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="cVz-WQ-LmU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3451" y="404"/>
-        </scene>
-        <!--Item 1-->
-        <scene sceneID="8Hc-od-bqP">
-            <objects>
-                <viewController id="BWi-mL-fvd" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="m63-0p-xPG">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="jlM-l2-pjn"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="lpq-HA-Vhu"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PiM-Cy-vYP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3451" y="-205"/>
+            <point key="canvasLocation" x="3450.7692307692305" y="-205.45023696682463"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="2wx-Gf-K8q">
             <objects>
                 <tabBarController id="NNf-kX-FlB" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ykE-B4-3gy">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="ykE-B4-3gy">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="83"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <tabBarAppearance key="standardAppearance" backgroundEffect="regular"/>
+                        <tabBarAppearance key="scrollEdgeAppearance"/>
                     </tabBar>
                     <connections>
                         <segue destination="BWi-mL-fvd" kind="relationship" relationship="viewControllers" id="VSI-Xu-Xgo"/>

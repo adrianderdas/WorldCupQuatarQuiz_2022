@@ -10,21 +10,26 @@ import Foundation
 
 var finalscore = 0
 
+
 struct QuizBrain {
     var questionNumber = 0
     var score = 0
-    
+    var list:[String] = []
     
     let quiz = [
         Question(q: "Ile bramek zdobył Robert Lewandowski na mistrzostwach świata w 2022?", a: ["1","0","2"], correctAnswer: "2"),
         Question(q: "Ile karnych obronił Wojciech Szczęsny", a: ["2","1","4"], correctAnswer: "2"),
-        Question(q: "Which of these colours is NOT featured in the logo for Google?", a: ["Green", "Orange", "Blue"], correctAnswer: "Orange"),
-        Question(q: "What alcoholic drink is made from molasses?", a: ["Rum", "Whisky", "Gin"], correctAnswer: "Rum"),
-        Question(q: "What type of animal was Harambe?", a: ["Panda", "Gorilla", "Crocodile"], correctAnswer: "Gorilla"),
-        Question(q: "Where is Tasmania located?", a: ["Indonesia", "Australia", "Scotland"], correctAnswer: "Australia")
+        Question(q: "asasasdasd", a: ["1", "2", "3"], correctAnswer: "Orange"),
+        Question(q: "sadfasdfasdf", a: ["1", "2", "3"], correctAnswer: "1"),
+        Question(q: "asdasd", a: ["1", "2", "3"], correctAnswer: "1"),
+        Question(q: "brrrrr", a: ["1", "3", "2"], correctAnswer: "1")
     ]
     
-    func getQuestionText() -> String {
+    
+    
+    mutating func getQuestionText() -> String {
+        list.append(quiz[questionNumber].text)
+        print(list)
         return quiz[questionNumber].text
     }
     
@@ -43,6 +48,7 @@ struct QuizBrain {
     //    func finalScore() -> Int {
     //        return finalScore
     //    }
+
     
     mutating func nextQuestion() {
         if questionNumber + 1 < quiz.count {

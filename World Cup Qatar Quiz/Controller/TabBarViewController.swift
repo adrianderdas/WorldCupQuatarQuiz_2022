@@ -1,26 +1,21 @@
 //
-//  ResultViewController.swift
+//  TabBarViewController.swift
 //  World Cup Qatar Quiz
 //
-//  Created by Adrian Derdaś on 16/01/2023.
+//  Created by Adrian Derdaś on 17/01/2023.
 //
 
 import UIKit
 
-class ResultViewController: UIViewController {
-    @IBOutlet weak var textScore: UILabel!
-    var quizBrain = QuizBrain()
-    
-    
+class TabBarViewController: UIViewController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        textScore.text = "Your's score is \(quizBrain.finalScore())"
-        
 
         // Do any additional setup after loading the view.
     }
     
+
     /*
     // MARK: - Navigation
 

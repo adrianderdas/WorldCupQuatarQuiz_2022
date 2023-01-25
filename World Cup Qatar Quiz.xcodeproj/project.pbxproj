@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A2279E0029801B96000C5955 /* OneQuestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2279DFF29801B96000C5955 /* OneQuestionTableViewCell.swift */; };
 		A27FEBA52970C59C002CFA53 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27FEBA42970C59C002CFA53 /* AppDelegate.swift */; };
 		A27FEBA72970C59C002CFA53 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27FEBA62970C59C002CFA53 /* SceneDelegate.swift */; };
 		A27FEBA92970C59C002CFA53 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27FEBA82970C59C002CFA53 /* ViewController.swift */; };
@@ -17,9 +18,12 @@
 		A27FEBBE29747F03002CFA53 /* QuizBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27FEBBD29747F03002CFA53 /* QuizBrain.swift */; };
 		A27FEBC029747F1A002CFA53 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27FEBBF29747F1A002CFA53 /* Question.swift */; };
 		A27FEBC22975F9A4002CFA53 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27FEBC12975F9A4002CFA53 /* ResultViewController.swift */; };
+		A280A97C2977387F00D40308 /* ListOfQuestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A280A97B2977387F00D40308 /* ListOfQuestionsViewController.swift */; };
+		A2FA4737297726A2001B5EEB /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2FA4736297726A2001B5EEB /* TabBarViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A2279DFF29801B96000C5955 /* OneQuestionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneQuestionTableViewCell.swift; sourceTree = "<group>"; };
 		A27FEBA12970C59C002CFA53 /* World Cup Qatar Quiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "World Cup Qatar Quiz.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A27FEBA42970C59C002CFA53 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A27FEBA62970C59C002CFA53 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -32,6 +36,8 @@
 		A27FEBBD29747F03002CFA53 /* QuizBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizBrain.swift; sourceTree = "<group>"; };
 		A27FEBBF29747F1A002CFA53 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		A27FEBC12975F9A4002CFA53 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ResultViewController.swift; path = "World Cup Qatar Quiz/Controller/ResultViewController.swift"; sourceTree = SOURCE_ROOT; };
+		A280A97B2977387F00D40308 /* ListOfQuestionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfQuestionsViewController.swift; sourceTree = "<group>"; };
+		A2FA4736297726A2001B5EEB /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +105,9 @@
 				A27FEBA82970C59C002CFA53 /* ViewController.swift */,
 				A27FEBB82972277B002CFA53 /* QuestionsViewController.swift */,
 				A27FEBC12975F9A4002CFA53 /* ResultViewController.swift */,
+				A2FA4736297726A2001B5EEB /* TabBarViewController.swift */,
+				A280A97B2977387F00D40308 /* ListOfQuestionsViewController.swift */,
+				A2279DFF29801B96000C5955 /* OneQuestionTableViewCell.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -174,12 +183,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2FA4737297726A2001B5EEB /* TabBarViewController.swift in Sources */,
 				A27FEBBE29747F03002CFA53 /* QuizBrain.swift in Sources */,
 				A27FEBA92970C59C002CFA53 /* ViewController.swift in Sources */,
 				A27FEBC22975F9A4002CFA53 /* ResultViewController.swift in Sources */,
 				A27FEBA52970C59C002CFA53 /* AppDelegate.swift in Sources */,
+				A280A97C2977387F00D40308 /* ListOfQuestionsViewController.swift in Sources */,
 				A27FEBC029747F1A002CFA53 /* Question.swift in Sources */,
 				A27FEBB92972277B002CFA53 /* QuestionsViewController.swift in Sources */,
+				A2279E0029801B96000C5955 /* OneQuestionTableViewCell.swift in Sources */,
 				A27FEBA72970C59C002CFA53 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
