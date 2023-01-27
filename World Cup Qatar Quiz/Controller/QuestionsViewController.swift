@@ -14,6 +14,7 @@ class QuestionsViewController: UIViewController {
         list = []
         icons = []
         updateUI()
+        finalscore = 0
     }
     
     var quizBrain = QuizBrain()
@@ -33,11 +34,11 @@ class QuestionsViewController: UIViewController {
         
         let userGotItRight = quizBrain.checkAnswer(userAnswer: userAnswer)
         
-        if userGotItRight {
-            sender.backgroundColor = UIColor.green
-        } else {
-            sender.backgroundColor = UIColor.red
-        }
+//        if userGotItRight {
+//            sender.backgroundColor = UIColor.green
+//        } else {
+//            sender.backgroundColor = UIColor.red
+//        }
         
         if quizBrain.questionNumber == quizBrain.quiz.count-1{
         
