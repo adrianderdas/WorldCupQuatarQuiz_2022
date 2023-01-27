@@ -14,8 +14,7 @@ class ResultViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        textScore.text = "Your's score is \(quizBrain.finalScore())"
+        textScore.text = "Twój wynik to \(quizBrain.finalScore()) punktów"
         
 
         // Do any additional setup after loading the view.

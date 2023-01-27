@@ -12,6 +12,7 @@ class QuestionsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         list = []
+        icons = []
         updateUI()
     }
     
@@ -49,20 +50,33 @@ class QuestionsViewController: UIViewController {
         
         }
         quizBrain.nextQuestion()
+        
         updateUI()
         print("\(quizBrain.questionNumber)")
         
     }
     
     @objc func updateUI() {
+    
+        if quizBrain.questionNumber <= quizBrain.quiz.count-1 {
         questionText.text = quizBrain.getQuestionText()
+            let answerChoices = quizBrain.getAnswers()
+            choice1.setTitle(answerChoices[0], for: .normal)
+            choice2.setTitle(answerChoices[1], for: .normal)
+            choice3.setTitle(answerChoices[2], for: .normal)
+            
+            progressBar.progress = quizBrain.getProgress()
+        }
+        else {
+        }
+        }
         
-        let answerChoices = quizBrain.getAnswers()
-        choice1.setTitle(answerChoices[0], for: .normal)
-        choice2.setTitle(answerChoices[1], for: .normal)
-        choice3.setTitle(answerChoices[2], for: .normal)
-        
-        progressBar.progress = quizBrain.getProgress()
+//        let answerChoices = quizBrain.getAnswers()
+//        choice1.setTitle(answerChoices[0], for: .normal)
+//        choice2.setTitle(answerChoices[1], for: .normal)
+//        choice3.setTitle(answerChoices[2], for: .normal)
+//
+//        progressBar.progress = quizBrain.getProgress()
     
     }
-}
+
