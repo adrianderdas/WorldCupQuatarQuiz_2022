@@ -11,6 +11,7 @@ class OneQuestionTableViewCell: UITableViewCell {
  
     @IBOutlet weak var oneQuestionText: UILabel!
     
+    @IBOutlet weak var oneIcon: UIImageView!
     @IBOutlet weak var questionText: UIView!
     override func awakeFromNib() {
         super.awakeFromNib()

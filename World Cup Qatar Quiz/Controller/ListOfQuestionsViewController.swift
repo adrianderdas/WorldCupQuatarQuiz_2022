@@ -26,13 +26,14 @@ class ListOfQuestionsViewController: UIViewController {
 
 extension ListOfQuestionsViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print (quiz.list.count)
-        return quiz.list.count
+        return list.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = questionView.dequeueReusableCell(withIdentifier: "OneQuestionTableViewCell") as! OneQuestionTableViewCell
-        let question = quiz.list[indexPath.row]
+        let question = list[indexPath.row]
+        let icon = icons[indexPath.row]
+        cell.oneIcon.image = UIImage(named: icon)
         cell.oneQuestionText.text = question
         return cell
     }

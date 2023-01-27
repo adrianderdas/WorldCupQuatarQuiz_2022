@@ -9,12 +9,12 @@ import Foundation
 
 
 var finalscore = 0
-
+var list:[String] = []
+var icons:[String] = []
 
 struct QuizBrain {
     var questionNumber = 0
     var score = 0
-    var list:[String] = []
     
     let quiz = [
         Question(q: "Ile bramek zdobył Robert Lewandowski na mistrzostwach świata w 2022?", a: ["1","0","2"], correctAnswer: "2"),
@@ -62,11 +62,13 @@ struct QuizBrain {
     
     mutating func checkAnswer(userAnswer: String) -> Bool {
         if userAnswer == quiz[questionNumber].rightAnswer {
+            icons.append("true_icon")
             score += 1
             finalscore = score
             return true
         }
         else {
+            icons.append("false_icon")
             return false
         }
     }
