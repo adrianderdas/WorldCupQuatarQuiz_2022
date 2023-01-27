@@ -8,6 +8,8 @@ import UIKit
 import Foundation
 
 
+//legia to stara k
+
 var finalscore = 0
 var list:[String] = []
 var icons:[String] = []
